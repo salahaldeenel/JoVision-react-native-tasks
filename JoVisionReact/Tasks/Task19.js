@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import { StyleSheet, View, Text, Button } from 'react-native';
 import MyClassPage from '../Custom_Components/MyClassPage'; // Correct the import path
 
-export default class Task16 extends Component {
+export default class Task19 extends Component {
   constructor() {
     super();
     this.state = {
       content: true
     };
+    
   }
   componentHideAndShow = () => {
     this.setState(previousState => ({ content: !previousState.content }));
