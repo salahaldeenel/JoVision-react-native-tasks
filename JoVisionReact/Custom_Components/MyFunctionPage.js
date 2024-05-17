@@ -12,6 +12,7 @@ export default function MyFunctionPage({name,grade,age}){
     
 return(
 <View>
+    
     <Text>Name:{name}</Text>
     <Text>Grade:{grade}</Text>
     <Text>Age:{age}</Text>
