@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text, Button } from 'react-native';
 import MyClassPage2 from '../Custom_Components/MyClassPage2';
-export default class Task16 extends Component {
+export default class Task23 extends Component {
   
 constructor(){
     super();

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ActivityIndicator, StyleSheet, View, Text } from 'react-native';
 
-export default class Task16 extends Component {
+export default class Task18 extends Component {
   constructor() {
     super();
     this.state = {
