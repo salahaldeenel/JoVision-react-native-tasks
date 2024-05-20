@@ -40,3 +40,12 @@ const styles = StyleSheet.create({
       marginTop: 10,
     },
   });
+  //to refrence one class to another 
+  // create a constructor and a super send props as its 
+  //arguments in the constructor create a variable and
+  // assign the createref() function to it
+  //create a function that will call the other class refrence
+  //function then in the tag add an attribute that will send the refrece u created
+  //in the refrenced class create a constructor like the before without the refrence
+  //create the funtion that will change what u need to change 
+  

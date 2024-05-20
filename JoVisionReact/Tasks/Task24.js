@@ -43,3 +43,14 @@ const styles = StyleSheet.create({
 });
 
 export default Task24;
+// to create a refrence from on funciton to another 
+// follow these steps 
+// create a varable and use the UseRef function from react
+// for it refrence outside functions
+//send this refrence to the function you aim to refrence
+// the function must have props and ref as its arguments
+// in the function you aim to refrence create a varibale and
+// its varibles function with the use state function from react
+//use imperative handling function include inside of it the ref
+// then use an arrow function and the use state variable function name
+//or any function u created to refrence the function 
