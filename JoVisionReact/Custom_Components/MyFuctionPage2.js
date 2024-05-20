@@ -3,9 +3,9 @@ import { View, Text,TextInput,StyleSheet } from 'react-native';
 
 export default function MyFunctionPage({setName}) {
   useEffect(() => {
-    console.log("MyFunctionPage loaded");
+    console.log("MyFunctionPage2 loaded");
     return () => {
-      console.log("MyFunctionPage unloaded");
+      console.log("MyFunctionPage2 unloaded");
     }
   }, []);
 
