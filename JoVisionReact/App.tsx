@@ -9,6 +9,7 @@ import Task23 from './Tasks/Task23';
 import Task24 from './Tasks/Task24';
 import Task25 from './Tasks/Task25';
 import Task26 from './Tasks/Task26';
+import Task27 from './Tasks/Task27';
 
 
 
@@ -28,7 +29,8 @@ export default class App extends Component {
   //<Task23></Task23>
   //<Task24></Task24>
   //<Task25></Task25>
-  <Task26></Task26>
+  //<Task26></Task26>
+  <Task27></Task27>
   
     
     );
