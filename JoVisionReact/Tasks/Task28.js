@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, FlatList, Image, Pressable, Alert, Button, TextInput } from 'react-native';
+import { StyleSheet, View, Text, FlatList, Image, Pressable, Alert, Button, TextInput, ImageBackground } from 'react-native';
+import MyButton from '../Custom_Components/MyButton';
 
 const styles = StyleSheet.create({
     container: {
@@ -19,6 +20,11 @@ const styles = StyleSheet.create({
         padding: 10,
         width: '80%',
         marginVertical: 20,
+    },
+    redButton: {
+        width: "10%", 
+        margin: 10, 
+        backgroundColor: "red"
     },
     image: {
         width: 200,
@@ -58,11 +64,17 @@ export default class Task28 extends Component {
 
     InputPicIndex = (index) => {
         const newIndex = parseInt(index);
-        if (newIndex >= 1 && newIndex <= 10) {
-            this.flatListRef.scrollToIndex({ animated: true, index: newIndex - 1 });
+        if (newIndex >= 1 && newIndex <= this.state.Flowers.length) {
+            this.flatListRef.scrollToIndex({ animated: false, index: newIndex - 1 });
         } else {
-            Alert.alert("Error", "Input a number between 1-10");
+            Alert.alert("Error", `Input a number between 1 and ${this.state.Flowers.length}`);
         }
+    }
+
+    Deletepicture = (index) => {
+        let updatedFlowers = [...this.state.Flowers];
+        updatedFlowers.splice(index, 1);
+        this.setState({ Flowers: updatedFlowers });
     }
 
     render() {
@@ -72,9 +84,12 @@ export default class Task28 extends Component {
                     ref={(ref) => { this.flatListRef = ref; }}
                     style={styles.image}
                     data={this.state.Flowers}
-                    renderItem={({ item }) => (
+                    keyExtractor={(item, index) => index.toString()}
+                    renderItem={({ item, index }) => (
                         <Pressable onPress={() => this.NoOfIndex(item.id)}>
-                            <Image source={item.imagesrc} style={styles.image} />
+                            <ImageBackground source={item.imagesrc} style={styles.image}>
+                                <MyButton title='Delete' onPress={()=> {this.Deletepicture(index)}} />
+                            </ImageBackground>
                         </Pressable>
                     )}
                 />
@@ -84,7 +99,7 @@ export default class Task28 extends Component {
                     value={this.state.index}
                     keyboardType="numeric"
                 />
-                <Button title='Click me' onPress={() => this.InputPicIndex(this.state.index)} />
+                <Button title='Scroll to Index' onPress={() => this.InputPicIndex(this.state.index)} />
                 <Text>{this.state.index}</Text>
             </View>
         );
