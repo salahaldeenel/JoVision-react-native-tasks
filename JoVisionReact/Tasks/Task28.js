@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text, FlatList, Image, Pressable, Alert, Button, TextInput, ImageBackground } from 'react-native';
 import MyButton from '../Custom_Components/MyButton';
+import RepeatButton from '../Custom_Components/RepeatButton';
 
 const styles = StyleSheet.create({
     container: {
@@ -76,7 +77,11 @@ export default class Task28 extends Component {
         updatedFlowers.splice(index, 1);
         this.setState({ Flowers: updatedFlowers });
     }
-
+   Repeatpicture = (index) =>{
+    let updatedFlowers = [...this.state.Flowers]
+    updatedFlowers.splice(index+1,0,this.state.Flowers[index]);
+    this.setState({ Flowers: updatedFlowers });
+   }
     render() {
         return (
             <View style={styles.container}>
@@ -86,9 +91,10 @@ export default class Task28 extends Component {
                     data={this.state.Flowers}
                     keyExtractor={(item, index) => index.toString()}
                     renderItem={({ item, index }) => (
-                        <Pressable onPress={() => this.NoOfIndex(item.id)}>
+                        <Pressable onPress={() => this.NoOfIndex(index+1)}>
                             <ImageBackground source={item.imagesrc} style={styles.image}>
                                 <MyButton title='Delete' onPress={()=> {this.Deletepicture(index)}} />
+                                <RepeatButton onPress={()=>{this.Repeatpicture(index)}}/>
                             </ImageBackground>
                         </Pressable>
                     )}
