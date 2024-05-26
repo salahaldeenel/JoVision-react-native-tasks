@@ -3,7 +3,6 @@ import Catvideo from "../Resource/Cat.mp4"
 import sleepyjoe from  "../Resource/Sleepyjoe.jpg"
 import { View,Text,StyleSheet, Image, ImageBackground, Pressable, Alert } from "react-native";
 import Video from "react-native-video";
-import Thumbnail from "../Custom_Components/Thumbnail";
 export default class Task32 extends Component{
     constructor(){
         super()
@@ -13,6 +12,7 @@ export default class Task32 extends Component{
         }
     }
     HideAndShow=()=>{
+        if(this.state.content == true)
         this.setState(previousState => ({ content: !previousState.content }));
     }
     render (){
