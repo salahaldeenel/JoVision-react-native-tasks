@@ -33,10 +33,10 @@ export default class App extends Component {
   //<Task24></Task24>
   //<Task25></Task25>
   //<Task26></Task26>
-  //<Task27></Task27>
- // <Task28></Task28>
+ // <Task27></Task27>
+ //<Task28></Task28>
   //<Task32></Task32>
-  <Task34></Task34>
+    <Task34></Task34>
     
     );
   }
