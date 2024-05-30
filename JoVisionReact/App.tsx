@@ -13,6 +13,7 @@ import Task27 from './Tasks/Task27';
 import Task28 from './Tasks/Task28';
 import Task32 from './Tasks/Task32';
 import Task34 from './Tasks/Task34';
+import Task35 from './Tasks/Task35';
 
 
 
@@ -36,7 +37,8 @@ export default class App extends Component {
  // <Task27></Task27>
  //<Task28></Task28>
   //<Task32></Task32>
-    <Task34></Task34>
+    //<Task34></Task34>
+    <Task35></Task35>
     
     );
   }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import MyFunctionPage from '../Custom_Components/MyFuctionPage2';
-
+ 
 const Task22 = () => {
   const [name, setName] = useState("This will Change"); // this can be used for function components not classes 
   //it will save name as whatever the paramters is and setName as a fucniton which will update setName

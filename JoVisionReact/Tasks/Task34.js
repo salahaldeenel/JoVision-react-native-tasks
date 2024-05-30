@@ -16,8 +16,6 @@ return(
 
 )
 
-}alert=()=>{
-Alert.alert("Hi","Hi")
 }
 const styles = StyleSheet.create({
     container: {

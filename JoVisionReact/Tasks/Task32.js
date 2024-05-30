@@ -15,7 +15,7 @@ this.state={
 }
     
 togglePlayPause = () =>{
-this.setState(previousState=>({Stopped:!previousState.paused}))
+this.setState(previousState=>({Stopped:!previousState.Stopped}))
 }
 
     render() {
